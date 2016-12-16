@@ -1,0 +1,16 @@
+<html ng-app="bookieApp">
+<head>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.0/angular.min.js"></script>
+  <script src="main.js"></script>
+</head>
+<body>
+  <div ng-controller="MainController">
+    <h1>Bookie</h1>
+    <p>There are {{books.length}} books available</p>
+    <p ng-if="!books">Sorry, no books.</p>
+    <div ng-repeat="book in books">
+      {{book.name}}
+    </div>
+  </div>
+</body>
+</html>
